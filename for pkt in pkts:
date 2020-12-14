@@ -1,0 +1,12 @@
+for pkt in pkts:
+    if IP in pkt:
+        try:
+            print(pkt[IP].src)
+        except:
+           pass
+
+for pkt in pkts:
+...:     ipLayer = pkt.getlayer(IP)
+...:     if (pkt.haslayer(DNSQR)) and (pkt.payload.dport == 53):
+...:         print("SRC: " + ipLayer.src + " DST: " + ipLayer.dst + " QU
+...: ERY: " + )
